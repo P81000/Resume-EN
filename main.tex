@@ -1,0 +1,207 @@
+\documentclass[letterpaper,11pt]{article}
+\input{particulars}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{varwidth}
+\usepackage{pgffor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\describe}[2]{
+    \csname #1@#2\endcsname
+}
+
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\titlesection{
+\begin{center}
+    {\Huge \scshape \firstname \ \lastname} \\ \vspace{5pt}
+    \small \profile \\ \vspace{5pt}
+    \small \raisebox{-0.1\height}\faPhone\ \jasphone ~ \href{mailto:\email}{\raisebox{-0.2\height}\faEnvelope\  \underline{\email}} \textbar\ \underline{\mail} \\
+    \href{\linkedin}{\raisebox{-0.2\height}\faLinkedin\ \underline{\linkedin}}  ~
+    \href{\github}{\raisebox{-0.2\height}\faGithub\ \underline{\github}}
+    \vspace{-8pt}
+\end{center}
+}
+
+\begin{document}
+\titlesection
+
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading{\csname College1@Course\endcsname}
+      {\csname College1@Start\endcsname \ -- \csname College1@End\endcsname}
+      {\csname College1@School\endcsname}{}
+      \resumeSubheading{\csname College@Course\endcsname}
+      {\csname College@Start\endcsname \ -- \csname College@End\endcsname}
+      {\csname College@School\endcsname}{}
+      \resumeSubheading{\csname College2@Course\endcsname}
+      {\csname College2@Start\endcsname \ -- \csname College2@End\endcsname}
+      {\csname College2@School\endcsname}{}
+  \resumeSubHeadingListEnd
+
+\section{Profile}
+\begin{justify}
+    \resume
+    \\ 
+    \begin{center}
+        \foreach \i in {1,2,3,4,5, 6} {
+            \begin{varwidth}{0.2\textwidth}
+                \begin{tcolorbox}[colframe=black!10!white, colback=black!8!white, arc=4pt, boxsep=2pt, left=4pt, right=4pt, halign=center]
+                    \textbf{\small \csname Skills@Skill\i\endcsname}
+                \end{tcolorbox}
+            \end{varwidth}
+        }
+    \end{center}
+\end{justify}
+
+
+
+\newcommand{\renderExp}[1]{
+\resumeSubheading
+      {\csname #1@Company\endcsname}{\csname #1@Start\endcsname -- \csname #1@End\endcsname}
+      {\csname #1@Designation\endcsname}{\csname #1@Location\endcsname}
+      \csname #1@Highlights\endcsname
+}
+
+\section{Experience}
+    \resumeSubHeadingListStart
+        \renderExp{AeroRiver}
+        \renderExp{Freelancer}
+        \renderExp{IFSP}  
+  \resumeSubHeadingListEnd
+\vspace{16pt}
+
+\section{Certificates}
+  \resumeSubHeadingListStart
+      \resumeSubheading{\csname College3@Course\endcsname}
+      {}
+      {\csname College3@School\endcsname}{}
+  \resumeSubHeadingListEnd
+\vspace{1pt}
+    
+\section{Skills}
+\begin{multicols}{2}
+    \setlength{\columnsep}{0pt}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item{{C/C++}\dotfill}
+        \item{{Rust}\dotfill}
+        \item{{Python}\dotfill}
+        \item{{Java}\dotfill}
+        \item{{Lua}\dotfill}
+        \item{{Julia}\dotfill}
+        \item{{Bash}\dotfill}
+        \item{{Linux}\dotfill}
+        \item{{Docker}\dotfill}
+        \item{{Git}\dotfill}
+        \item{{Arduino}\dotfill}
+        \item{{2D\&3D AutoCAD}\dotfill}
+    \end{itemize}
+\end{multicols}
+
+
+\newcommand{\renderGit}[1]{
+    \item \textbf{\csname #1@Title\endcsname}
+    \csname #1@Highlights\endcsname
+}
+
+\section{Projects}
+\resumeSubHeadingListStart
+    \renderGit{SocialSTD}
+    \renderGit{OrganizAI}
+    \renderGit{SmartParking}
+    \renderGit{VPN-Blockchain}
+\resumeSubHeadingListEnd
+
+\end{document}
+

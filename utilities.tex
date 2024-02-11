@@ -1,0 +1,32 @@
+\usepackage{forarray}
+
+
+\newcommand{\EducationTemplate}[5]
+{
+\DefineArrayVar{#1}{@}
+{|}{Start|End|School|Course}
+{|}{{#2}|{#3}|{#4}|{#5}}
+}
+
+\newcommand{\SkillsTemplate}[7]
+{
+    \DefineArrayVar{#1}{@}
+    {|}{Skill1|Skill2|Skill3|Skill4|Skill5|Skill6}
+    {|}{{#2}|{#3}|{#4}|{#5}|{#6}|{#7}}
+}
+
+\newcommand{\ExpTemplate}[7]
+{
+\DefineArrayVar{#1}{@}
+{|}{Start|End|Designation|Company|Location|Highlights}
+{|}{{#2}|{#3}|{#4}|{#5}|{#6}|{#7}}
+}
+
+\newcommand{\GitTemplate}[3]
+{
+\DefineArrayVar{#1}{@}
+{|}{Title|Highlights}
+{|}{{#2}|{#3}}
+}
+
+\def\sett#1#2#3{\expandafter\def\csname#1#2\endcsname{#3}}

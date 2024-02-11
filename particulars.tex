@@ -1,0 +1,147 @@
+\input{utilities}
+\usepackage{blindtext}  
+\usepackage{lipsum}
+\usepackage{ragged2e}
+
+\def\lrand{\lipsum[-]}
+\def\firstname{Pedro Henrique}
+\def\lastname{Masteguin}
+\def\email{ph.masteguin@gmail.com}
+\def\profile{Junior Developer at AeroRiver \textbar\ 
+             Computer Science       \textbar\
+             Eletronics Technician  \textbar\
+             Embedded Systems, Software Developer, Microcontrollers, DevOps, Cybersecurity \textbar\
+             C/C++, Rust, Python, Lua, Java, Julia, Linux, Git, Docker}
+\def\mail{p.masteguin@unifesp.com}
+\def\linkedin{linkedin.com/in/pedrohenriquemasteguin}
+\def\github{github.com/P81000}
+\def\jasphone{+55 (19) 99938-8063}
+
+\def\jbegin{\resumeItemListStart}
+\def\jitem{\resumeItem}
+\def\jend{\resumeItemListEnd}
+
+\def\resume{
+    Eletronics technician at Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, graduated with a
+    Bachelor's degree in Science and Technology at Universidade Federal do Estado de São Paulo - UNIFESP, currently
+    pursuing a Bachelor's degree in Computer Science at Universidade Federal do Estado de São Paulo - UNIFESP. Working 
+    as a Junior Developer at AeroRiver, specializing in embedded systems programming aplied to aeronautics.
+    \\
+    \\
+    I worked as a technology freelancer offering computer assembly and repair services, preventive maintenance and other IT
+    maintenance and support services. During my technical course, I taught math classes in an Olympics project offered 
+    by the institution. In this role, I guided students in carrying out the Olympics tests, aiming to win medals. My most recent 
+    experience is as an embedded systems programmer at AeroRiver. In terms of my technical qualifications, I am proeficient
+    in programming with C/C++, Rust and Python, where I've applied my skills to solve a variety of real-world challenges. Additionally,
+    I am well-versed in Linux systems, eletronics and embbeded systems, enabling me to work in versatile computing environments.
+}
+
+\SkillsTemplate{Skills}
+{Teamwork}{Logical}{Adaptability}{Autodidact}{Organization}{Proactivity}
+
+% # Add education item here
+\EducationTemplate{College}
+{Mar 2021}{Dec 2023}{UNIFESP - Universidade Federal de São Paulo}
+{Bachelor of Science and Technology}
+\EducationTemplate{College1}
+{Jan 2024}{Present}{UNIFESP - Universidade Federal de São Paulo}
+{Bachelor of Computer Science}
+\EducationTemplate{College2}
+{Jan 2017}{Dec 2020}{IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo}
+{Integrated Eletronics Technician Program (High School Level)}
+\EducationTemplate{College3}
+{Jan 2019}{Dec 2019}{SENAC - São Paulo}
+{Computer Assembler and Repairer Technician}
+
+\ExpTemplate{AeroRiver}
+{Mar 2023}
+{Present}
+{AeroRiver}
+{Embbeded \& Aeronautic Systems programmer}
+{São José dos Campos}
+{
+\jbegin
+    \jitem{Development of Python scripts and C routines for reading and acquiring data from sensors}
+    \jitem{Assembling eletrical and eletronic circuits}
+    \jitem{Responsible for creating and organizing code versioning structure and agile development methodology}
+    \jitem{Co-worker in the development of a Flight Aid System for WIG vehicle}
+    \jitem{Configuration of Docker-based virtual development and testing environmnet}
+\jend
+}
+
+\ExpTemplate{Freelancer}
+{Jan 2019}
+{Dec 2019}
+{Freelancer}
+{Freelance Computer Maintenance \& Repair Service Provider}
+{São João da Boa Vista}
+{
+\jbegin
+    \jitem{Repair and maintenance of various operating systems}
+    \jitem{Cleaning and basic hardware repairs}
+    \jitem{Basic repairs and software installation on various operating systems}
+\jend
+}
+
+\ExpTemplate{IFSP}
+{Jan 2019}
+{Dec 2019}
+{IFSP}
+{Mathematics Olympiad Project Instructor}
+{São João da Boa Vista}
+{
+\jbegin
+    \jitem{Preparation and instruction of olympiad-related math classes}
+    \jitem{Creation of assessment activities to test knowledge}
+    \jitem{Mental preparation guidance for Mathematics Olympic}
+\jend
+}
+
+% GitHUB Projects %
+\GitTemplate{SocialSTD}
+{SocialSTD - Rust-based automated Trello reporting project}
+{
+\jbegin
+    \item{
+            Project developed in Rust that utilizes Trello API to request information about 
+            user's boards, lists and cards in order to generate a report featuring the most pertinent insights.
+         }
+\jend
+}
+
+\GitTemplate{OrganizAI}
+{OrganizAI - Assistant \& smart scheduler}
+{
+\jbegin
+    \item{
+            OranizAI is a project focused on use Artificial Intelligence to improve personal
+            organization and time management. The project was a web application of an agenda, developed with Java
+            as Back-end language and Vue.js framework as Front-end stack.
+         }
+\jend
+}
+
+\GitTemplate{SmartParking}
+{AI-Parking - Smart Parking management system using AI}
+{
+\jbegin
+    \item{
+            Developed for the UNIFESP university campus, by utilizing computer vision techniques with convolutional
+            networks using YOLOv8 model from Ultralytics, the project was developed to detect and identify
+            vehicles in parking spaces. Using Python, the approach provides real-time
+            monitoring and counting of available and occupied parking spots, offering a more efficient parking experience.
+         }
+\jend
+}
+
+\GitTemplate{VPN-Blockchain}
+{VPN-based Blockchain Network - Blockchain implementation using VPN approach}
+{
+\jbegin
+    \item{
+            Using a Hyperledger fabric blockchain and OpenVPN, this project aimed to compare time and space efficiency
+            of implement a standard blockchain network versus one with VPN among the peers in order to assess the feasibility of adding
+            an extra layer of security to blockchain network communication
+        }
+\jend
+}
