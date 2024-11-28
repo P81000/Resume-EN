@@ -130,23 +130,6 @@
       {\csname College2@School\endcsname}{}
   \resumeSubHeadingListEnd
 
-\section{Profile}
-\begin{justify}
-    \resume
-    \\ 
-    \begin{center}
-        \foreach \i in {1,2,3,4,5, 6} {
-            \begin{varwidth}{0.2\textwidth}
-                \begin{tcolorbox}[colframe=black!10!white, colback=black!8!white, arc=4pt, boxsep=2pt, left=4pt, right=4pt, halign=center]
-                    \textbf{\small \csname Skills@Skill\i\endcsname}
-                \end{tcolorbox}
-            \end{varwidth}
-        }
-    \end{center}
-\end{justify}
-
-
-
 \newcommand{\renderExp}[1]{
 \resumeSubheading
       {\csname #1@Company\endcsname}{\csname #1@Start\endcsname -- \csname #1@End\endcsname}
@@ -156,19 +139,34 @@
 
 \section{Experience}
     \resumeSubHeadingListStart
+        \renderExp{Instructor}
         \renderExp{AeroRiver}
         \renderExp{Freelancer}
         \renderExp{IFSP}  
   \resumeSubHeadingListEnd
-\vspace{16pt}
 
-\section{Certificates}
-  \resumeSubHeadingListStart
-      \resumeSubheading{\csname College3@Course\endcsname}
-      {}
-      {\csname College3@School\endcsname}{}
-  \resumeSubHeadingListEnd
-\vspace{1pt}
+\section{Profile}
+\begin{justify}
+    \resume
+%     \\ 
+%     \begin{center}
+%         \foreach \i in {1,2,3,4,5, 6} {
+%             \begin{varwidth}{0.2\textwidth}
+%                 \begin{tcolorbox}[colframe=black!10!white, colback=black!8!white, arc=4pt, boxsep=2pt, left=4pt, right=4pt, halign=center]
+%                     \textbf{\small \csname Skills@Skill\i\endcsname}
+%                 \end{tcolorbox}
+%             \end{varwidth}
+%         }
+%     \end{center}
+\end{justify}
+
+% \section{Certificates}
+%   \resumeSubHeadingListStart
+%       \resumeSubheading{\csname College3@Course\endcsname}
+%       {}
+%       {\csname College3@School\endcsname}{}
+%   \resumeSubHeadingListEnd
+% \vspace{1pt}
     
 \section{Skills}
 \begin{multicols}{2}
@@ -179,7 +177,7 @@
         \item{{Python}\dotfill}
         \item{{Java}\dotfill}
         \item{{Lua}\dotfill}
-        \item{{Julia}\dotfill}
+        \item{{Vue.js}\dotfill}
         \item{{Bash}\dotfill}
         \item{{Linux}\dotfill}
         \item{{Docker}\dotfill}
