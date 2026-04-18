@@ -1,0 +1,199 @@
+\input{utilities}
+\usepackage{blindtext}  
+\usepackage{lipsum}
+\usepackage{ragged2e}
+
+\def\lrand{\lipsum[-]}
+\def\firstname{Pedro Henrique}
+\def\lastname{Masteguin}
+\def\email{ph.masteguin@gmail.com}
+\def\profile{Mid-Level Developer at Segura \textbar\
+             Electronic Technician  \textbar\
+             Embedded Systems, Software Development, Computer Vision, Fullstack, Cybersecurity \textbar\
+             C, C++17, Bash, Python, Lua, Vue3, Linux, Git, Docker}
+\def\mail{pmasteguin@icloud.com}
+\def\linkedin{https://linkedin.com/in/pedrohenriquemasteguin}
+\def\github{https://github.com/P81000}
+\def\jasphone{+55 (19) 99938-8063}
+
+\def\jbegin{\resumeItemListStart}
+\def\jitem{\resumeItem}
+\def\jend{\resumeItemListEnd}
+
+\def\resume{
+    Systems Developer and Electronic Technician with a Bachelor’s in Science and Technology from UNIFESP. 
+    Currently a Mid-Level Developer at Segura, specializing in high-performance Linux-based systems and 
+    network proxy implementation using C. 
+    \\
+    \\
+    My background bridges the gap between hardware and software, with professional experience ranging 
+    from aerospace systems engineering at AeroRiver to developing complex middleware solutions.  
+    I have a proven track record in freelancing and technical instruction, demonstrating both 
+    technical versatility and the ability to communicate complex concepts effectively.
+    I am also an active open-source contributor, with code merged into core libraries such as libssh2.
+    \\
+    \\
+    Technically proficient in C/C++, Bash, Lua, and Python, I focus on building efficient, low-level 
+    applications. My expertise in Linux internals, embedded systems, and electronics allows me 
+    to tackle challenges across the entire computing stack, from firmware to distributed systems.
+}
+
+\SkillsTemplate{Skills}
+{Teamwork}{Logical}{Adaptability}{Autodidact}{Organization}{Proactive}
+
+% # Add education item here
+\EducationTemplate{College}
+{Mar 2021}{Dec 2023}{UNIFESP - Universidade Federal de São Paulo}
+{Bachelor of Science and Technology}
+\EducationTemplate{College2}
+{Jan 2017}{Dec 2020}{IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo}
+{Integrated Electronic Technician Program (High School Level)}
+\EducationTemplate{College3}
+{Jan 2019}{Dec 2019}{SENAC - São Paulo}
+{Computer Assembler and Repairer Technician}
+
+\ExpTemplate{Segura}
+{April 2025}
+{Present}
+{Segura}
+{Software Developer}
+{Home Office}
+{
+\jbegin
+    \jitem{Development of Linux-based solutions for secure software communication}
+    \jitem{Implementation of various communication and security protocols, including TCP, UDP, SSH, SFTP, HTTP/HTTPS, and SSL/TLS}
+    \jitem{Hands-on experience with remote access and database protocols such as RDP (NLA), VNC, Telnet, and TDS}
+    \jitem{Extensive use of large-scale open-source libraries and frameworks, including FreeRDP, Apache Guacamole, OpenSSH, and OpenSSL}
+    \jitem{Architecting reliable and secure C code for mission-critical cybersecurity applications}
+    \jitem{Active contributor to the open-source community, including bug fixes in the libssh2 library (mbedTLS crypto backend) to enhance protocol stability and security}
+\jend
+}
+
+\ExpTemplate{Instructor}
+{Nov 2024}
+{June 2025}
+{CtrlPlay}
+{Programming and Robotics Instructor}
+{Taubaté}
+{
+\jbegin
+    \jitem{Game development witch Scratch, C++, Python and JavaScript}
+    \jitem{Planning and teaching programming lessons for children and teenagers}
+    \jitem{Preparation of progress tracking reports}
+\jend
+}
+
+\ExpTemplate{AeroRiver}
+{Mar 2023}
+{Mar 2025}
+{AeroRiver}
+{Systems Engineer}
+{São José dos Campos}
+{
+\jbegin
+    \jitem{Development of Python, Bash scripts and C routines for reading and acquiring data from sensors}
+    \jitem{Assembling electrical and electronic circuits}
+    \jitem{Responsible for creating and organizing code versioning structure and agile development methodology}
+    \jitem{Co-worker in the development of a Flight Aid System for WIG vehicle}
+    \jitem{Configuration of Docker-based virtual development and testing environment}
+    \jitem{Configuration of AWS EC2 and S3 instances for running StarCCM+ simulations}
+    \jitem{Research Team Leader}
+    \jitem{Implementation of unit test routines with GTEST}
+\jend
+}
+
+\ExpTemplate{Freelancer}
+{Jan 2021}
+{Present}
+{Freelancer}
+{Freelance System Developer}
+{Multiple Locations}
+{
+\jbegin
+    \jitem{Development of a computer vision system for cattle detection and counting, assisting in automation of a farm management in Mato Grosso, Brazil}
+    \jitem{Full-stack development of a web application for an online egg sales platform. Infrastructure setup, backend development, integration with payment platforms and database, frontend development}
+    \jitem{Basic repairs and software installation on various operating systems}
+\jend
+}
+
+\ExpTemplate{IFSP}
+{Jan 2019}
+{Dec 2019}
+{IFSP}
+{Mathematics Olympiad Project Instructor}
+{São João da Boa Vista}
+{
+\jbegin
+    \jitem{Preparation and instruction of olympiad-related math classes}
+    \jitem{Creation of assessment activities to test knowledge}
+    \jitem{Mental preparation guidance for Mathematics Olympic}
+\jend
+}
+
+% GitHUB Projects %
+\GitTemplate{Redis}
+{Distributed In-Memory Database - Full RESP Protocol Implementation \textbar{} C++20}
+{
+\jbegin
+    \item{
+            Built a high-performance, multithreaded key-value store in C++20 that replicates core Redis functionalities. 
+            Implemented a custom TCP server with an event-driven architecture to handle concurrent connections 
+            using low-level socket programming.
+         }
+    \item{
+            Developed a robust parser for the Redis Serialization Protocol (RESP) and integrated support for 
+            complex data structures, TTL-based key expiration, and RDB persistence for disk storage.
+         }
+    \item{
+            Optimized memory usage and command execution latency, achieving performance metrics comparable 
+            to production-grade middleware systems.
+         }
+\jend
+}
+\GitTemplate{SocialSTD}
+{SocialSTD - Rust-based automated Trello reporting project \textbar{} CLI Tool}
+{
+\jbegin
+    \item{
+            Project developed in Rust that utilizes Trello API to request information about 
+            user's boards, lists and cards in order to generate a report featuring the most pertinent insights.
+         }
+\jend
+}
+
+\GitTemplate{OrganizAI}
+{OrganizAI - Assistant \& smart scheduler \textbar{} Wep Application}
+{
+\jbegin
+    \item{
+            OranizAI is a project focused on use Artificial Intelligence to improve personal
+            organization and time management. The project was a web application of an agenda, developed with Java
+            as Back-end language and Vue.js framework as Front-end stack.
+         }
+\jend
+}
+
+\GitTemplate{SmartParking}
+{AI-Parking - Smart Parking management system using AI \textbar{} Computer Vision}
+{
+\jbegin
+    \item{
+            Developed for the UNIFESP university campus, by utilizing computer vision techniques with convolutional
+            networks using YOLOv8 model from Ultralytics, the project was developed to detect and identify
+            vehicles in parking spaces. Using Python, the approach provides real-time
+            monitoring and counting of available and occupied parking spots, offering a more efficient parking experience.
+         }
+\jend
+}
+
+\GitTemplate{VPN-Blockchain}
+{VPN-based Blockchain Network - Blockchain implementation using VPN approach \textbar{} Blockchain}
+{
+\jbegin
+    \item{
+            Using a Hyperledger fabric blockchain and OpenVPN, this project aimed to compare time and space efficiency
+            of implement a standard blockchain network versus one with VPN among the peers in order to assess the feasibility of adding
+            an extra layer of security to blockchain network communication
+        }
+\jend
+}
